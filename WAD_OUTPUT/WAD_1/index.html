@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="tooltip-container">
+        <button class="search-btn" onclick="onOpen()">
+          <svg class="search-icon">
+            <use xlink:href="#search"></use>
+          </svg>
+          <span class="search-text">Search User</span>
+        </button>
+        <div class="tooltip">
+          <span class="tooltip-text">Search users to chat</span>
+        </div>
+      </div>
+      <h1 class="title">Talk-A-Tive</h1>
+      <div class="menu-container">
+        <div class="dropdown-container">
+          <button class="notification-btn">
+            <svg class="bell-icon">
+              <use xlink:href="#bell"></use>
+            </svg>
+          </button>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+              <li class="dropdown-item">No new messages</li>
+              <li class="dropdown-item">
+                New message in <span class="group-name"></span>
+              </li>
+              <li class="dropdown-item">
+                New message from <span class="sender-name"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-container">
+          <button class="avatar-btn">
+            <img class="avatar" src="" alt="User Avatar" />
+            <svg class="chevron-down-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <button class="profile-btn">My Profile</button>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item">
+                <button class="logout-btn" onclick="logoutHandler()">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidedrawer-container">
+      <div class="sidedrawer">
+        <h2 class="sidedrawer-header">Search Users</h2>
+        <div class="sidedrawer-body">
+          <div class="search-container">
+            <input
+              class="search-input"
+              type="text"
+              placeholder="Search by name or email"
+              value=""
+              onchange="setSearch(event.target.value)"
+            />
+            <button class="go-btn" onclick="handleSearch()">Go</button>
+          </div>
+          <div class="loading-container">
+            <img class="chat-loading" src="" alt="Loading..." />
+          </div>
+          <ul class="user-list">
+            <li class="user-list-item">
+              <button class="user-list-btn">
+                <img class="user-list-avatar" src="" alt="User Avatar" />
+                <span class="user-list-name"></span>
+              </button>
+            </li>
+          </ul>
+          <div class="loading-container">
+            <img class="spinner" src="" alt="Loading..." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
